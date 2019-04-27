@@ -14,7 +14,7 @@ class Weather extends Component {
             {this.props.temperature && <p> Temperature: { this.props.temperature } </p>} 
             {this.props.humidity && <p> Humidity:  { this.props.humidity }</p>}
             {this.props.condition && <p> Condition: { this.props.description }</p>}
-
+            {this.props.error && <p> {this.props.error}</p>}
             </div>
         );
     }

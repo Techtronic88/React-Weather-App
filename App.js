@@ -33,6 +33,15 @@ class App extends Component {
       description: data.weather[0].description,
       error: "" 
     })
+  } else {
+    this.setState ({ 
+      temperature: '',
+      city: '',
+      country: '',
+      humidity: '',
+      description: '',
+      error: "Kindly enter a value"
+    });
   }
 }
   render() {
