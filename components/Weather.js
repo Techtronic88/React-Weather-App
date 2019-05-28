@@ -1,36 +1,33 @@
 import React from "react";
 
-const Weather = props =>  (
-
-    // NOTE TO SELF: In render block you cannot use comment the traditional way
-    
+const Weather = ({city, country, temperature, humidity, condition, description, error}) =>  (
+            
             <div className="weather__info">
 
-            {/* Since JSX does not like if/ else statement, we utilized the && method below 
-                left hand side of && represents condition - Right hand side is action shoudld left hand side === true */}
-            {props.city && <p className="weather__key"> Location: 
-                <span className="weather__value"> { props.city }</span>
+            {/* Since JSX does not like if/ else statement, we utilized the && method below */}
+            {city && <p className="weather__key"> Location: 
+                <span className="weather__value"> {city}</span>
                 </p>
             }
 
 
-            {props.country && <p className="weather__key"> Country: 
-               <span className="weather__value"> { props.country } </span>
+            {country && <p className="weather__key"> Country: 
+               <span className="weather__value"> {country} </span>
                </p>
             }
-            {props.temperature && <p className="weather__key"> Temperature: 
-                <span className="weather__value"> { props.temperature } </span>
+            {temperature && <p className="weather__key"> Temperature: 
+                <span className="weather__value"> {temperature } </span>
                  </p>
         } 
-            {props.humidity && <p className="weather__key"> Humidity:  
-                <span className="weather__value"> { props.humidity } </span>
+            {humidity && <p className="weather__key"> Humidity:  
+                <span className="weather__value"> {humidity} </span>
                 </p>
             }
-            {props.condition && <p className="weather__key"> Condition: 
-                <span className="weather__value"> { props.description } </span>
+            {condition && <p className="weather__key"> Condition: 
+                <span className="weather__value"> {description} </span>
                 </p>
             }
-            {props.error && <p className="weather__key"> {props.error}</p>}
+            {error && <p className="weather__key"> {error}</p>}
             </div>
         ); 
 
