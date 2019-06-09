@@ -1,5 +1,10 @@
 import React from "react";
 
+
+// NOTE: Destructured has been used as argument and in implied return we can just pull the destructured 
+// data out straight away.
+
+// Another way to do is create the component with normal syntax but that would require writing render / return etc
 const Weather = ({city, country, temperature, humidity, condition, description, error}) =>  (
             
             <div className="weather__info">
@@ -10,7 +15,6 @@ const Weather = ({city, country, temperature, humidity, condition, description, 
                 </p>
             }
 
-
             {country && <p className="weather__key"> Country: 
                <span className="weather__value"> {country} </span>
                </p>
@@ -18,7 +22,7 @@ const Weather = ({city, country, temperature, humidity, condition, description, 
             {temperature && <p className="weather__key"> Temperature: 
                 <span className="weather__value"> {temperature } </span>
                  </p>
-        } 
+            } 
             {humidity && <p className="weather__key"> Humidity:  
                 <span className="weather__value"> {humidity} </span>
                 </p>
