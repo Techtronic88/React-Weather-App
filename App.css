@@ -9,7 +9,7 @@ body {
   }
   
   .wrapper {
-    background: linear-gradient(to right, #e67e22, #e74c3c);
+    background: linear-gradient(to right, #051837, #00446b, #00759e, #00abc9, #12e3eb);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ body {
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #000;
+      color: #303030;
   }
 
   .title-container__title {
@@ -40,7 +40,7 @@ body {
       letter-spacing: 2px;
       line-height: 1.3px;
       font-family: 'Roboto Slab', serif;
-      line-height: 25px
+      line-height: 25px;
   }
 
   .title-container__subtitle {
@@ -85,7 +85,7 @@ button {
     border: 0;
     padding: 10px 20px;
     margin: 0 2px;
-    border-radius: 2px;
+    border-radius: 20px;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 15px;
@@ -95,6 +95,12 @@ button {
     font-weight: 100;
   }
   
+button:hover {
+  color: white;
+  font-size: 15px;
+  background-color: #12e3eb;
+}
+
   button:active {
     outline: none;
   }
